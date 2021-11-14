@@ -1,0 +1,58 @@
+﻿body{
+    font-family: Helvetica, sans-serif;
+}
+
+
+.navbar {
+    background-color: cornflowerblue;
+    height: fit-content;
+    margin: 0px;
+    top: 0px;
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    display: inline;
+    height: fit-content;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+ header ul li{
+            display: inline;
+            float: left;
+            overflow: hidden;
+            background-color: #dddddd;
+            color: black;
+            height 50px;
+            align-content: center;
+            border-right: 1px solid grey;
+        }
+
+        a {
+            display: inline-block;
+            padding : 10px 10px 10px 10px;
+            
+            margin: auto;
+
+
+        }
+
+.navbar-brand {
+    background-color: cornflowerblue;
+    color: black;
+}
+
+.active {
+    background-color: ffddff;
+    color: red;
+}
+
+div {
+    display:block;
+
+}

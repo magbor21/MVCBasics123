@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - MCV Assignment 1</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">               
+            <ul class="navbar-nav">
+                <li> 
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC Assignments</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a  asp-area="" asp-controller="Home" asp-action="About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Home" asp-action="Contact">Contact info</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Home" asp-action="Projects">My Projects</a>
+                </li>
+            </ul>   
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div>
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer>
+        <p>@DateTime.Now.ToString("yy-MM-dd") © Magnus Borglund </p>
+    </footer>
+
+</body>
+</html>
