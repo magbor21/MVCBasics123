@@ -10,32 +10,24 @@ namespace MVC_Basics1.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.msg = "<h2>Welcome to my page </h2>\n" +
-                "<p>Please select an option in the menu above</p>";
+            ViewBag.headline = "Welcome to my page";
+            ViewBag.text = "Please select an option in the menu above";
             return View();
         }
 
         public IActionResult About()
         {
-            ViewBag.msg = "<h2>About Me </h2>\n" +
-                "<div>" +
-                "<h4> Fast facts: </h4>\n" +
-                "<ul>" +
-                "<li>Name: Magnus</li>" +
-                "<li>Age: 42 years</li>\n" +
-                "<li>Height: 185-ish cm</li>\n" +
-                "</ul>" +
-                "</div>";
+            ViewBag.name = "Magnus";
+            ViewBag.age = "42 years old";
+            ViewBag.height = "185-ish cm";
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewBag.msg = " < h2 > Contact </ h2 >\n" +
-                "<div>" +
-                "<p> Phone: \t<a href=\"tel: +46703011271\">070-30 11 271</a></p>\n" +
-                "<p> E-mail:\t<a href=\"mailto: magbor@gmail.com\">magbor@gmail.com</a></p>\n" +
-                "</div>";
+            ViewBag.phone = "070-30 11 271";
+            ViewBag.phoneInternational = "+46703011271";
+            ViewBag.email = "magbor@gmail.com";
 
             return View();
         }

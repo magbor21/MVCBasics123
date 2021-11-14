@@ -3,8 +3,18 @@
     ViewData["Title"] = "Home";
 }
 
-<h1>Index</h1>
-@if(ViewBag.msg != null)
-            {
-<div>@ViewBag.msg</div>
-            }
+
+@if (ViewBag.headline != null)
+{
+    <h2>@ViewBag.headline</h2>
+}
+
+@if (ViewBag.text != null)
+{
+    <div>
+        @ViewBag.text
+    
+    
+    </div>
+}
+

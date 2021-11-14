@@ -5,6 +5,25 @@
     ViewData["Title"] = "About";
 }
 
+<div>
+    <h4> About me: </h4>
+    <ul>
+        @if (ViewBag.name != null)
+        {
+            <li>Name: @ViewBag.name</li>
+        }
+        @if (ViewBag.age != null)
+        {
+            <li>Age: @ViewBag.age</li>
+        }
+        @if (ViewBag.height != null)
+        {
+            <li>Height: @ViewBag.height</li>
+        }
+
+    </ul>
+</div>
+
 @if (ViewBag.msg != null)
 {
     <div>@ViewBag.msg</div>

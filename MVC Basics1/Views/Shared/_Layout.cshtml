@@ -20,16 +20,16 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a  asp-area="" asp-controller="Home" asp-action="About">About</a>
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="About">About</a>
                 </li>
                 <li class="nav-item">
-                    <a asp-area="" asp-controller="Home" asp-action="Contact">Contact info</a>
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Contact">Contact info</a>
                 </li>
                 <li class="nav-item">
-                    <a asp-area="" asp-controller="Home" asp-action="Projects">My Projects</a>
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Projects" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Projects">My Projects</a>
                 </li>
             </ul>   
         </nav>
@@ -44,7 +44,7 @@
     </main>
 
     <footer>
-        <p>@DateTime.Now.ToString("yy-MM-dd") © Magnus Borglund </p>
+        @DateTime.Now.ToString("yyyy-MM-dd") © Magnus Borglund
     </footer>
 
 </body>

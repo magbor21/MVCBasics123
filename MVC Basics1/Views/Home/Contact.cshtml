@@ -5,7 +5,15 @@
     ViewData["Title"] = "Contact";
 }
 
-@if (ViewBag.msg != null)
-{
-<div>@ViewBag.msg</div>
-}
+<h4>My contact info</h4>
+<ul>
+    @if (ViewBag.phone != null && ViewBag.phoneInternational != null)
+    {
+    <li> Phone: <a href="tel:@ViewBag.phoneInternational">@ViewBag.phone</a> </li>
+    }
+    @if (ViewBag.email != null)
+    {
+    <li> E-mail: <a href="mailto:@ViewBag.email">@ViewBag.email</a> </li>
+    }
+</ul>
+
