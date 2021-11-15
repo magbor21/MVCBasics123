@@ -15,10 +15,10 @@
     <header>
         <nav class="navbar">               
             <ul class="navbar-nav">
-                <li> 
+                <li>
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC Assignments</a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
@@ -30,6 +30,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Projects" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Projects">My Projects</a>
+                </li>
+                <li class="nav-item">
+                <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Fever" ? "active" : "")" asp-area="" asp-controller="Doctor" asp-action="Fevercheck">Fevercheck</a>
                 </li>
             </ul>   
         </nav>
