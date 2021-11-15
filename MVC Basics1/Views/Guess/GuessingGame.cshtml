@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "GuessingGame";
+}
+
+<h2>Welcome to the Number Guessing Game</h2>
+@if (ViewBag.result != null)
+{
+    <div> @ViewBag.result</div>
+}
+
+<form method="post" enctype="multipart/form-data" asp-controller="Guess" asp-action="GuessingGame">
+
+    <!-- Narrows the number of guessable numbers -->
+    <input type="number" id="guess" name="Guesses" min="@ViewBag.lowest" max="@ViewBag.highest" step="1" value="@((Int32.Parse(ViewBag.highest)+Int32.Parse(ViewBag.lowest))/2)">
+                                                                                                                <!-- and suggests a number in the middle -->
+        <input type="submit" name="submit" value="Submit" />
+        <br />
+        <label>Number of guesses: @(Int32.Parse(ViewBag.guesses))</label>
+        </form>
+    <button class="NewGame" type="button" id="newGame" onclick="location.href='@Url.Action("GuessingGame")'"> New Game </button> <!-- resets the board by reloading the whole page-->

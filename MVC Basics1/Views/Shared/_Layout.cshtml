@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData["Title"] - MCV Assignment 1</title>
+    <link rel="icon" href="~/favicon.ico" /> 
     <link rel="stylesheet" href="~/css/site.css" />
 
 
@@ -32,7 +33,10 @@
                     <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Projects" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Projects">My Projects</a>
                 </li>
                 <li class="nav-item">
-                <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Fever" ? "active" : "")" asp-area="" asp-controller="Doctor" asp-action="Fevercheck">Fevercheck</a>
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Fevercheck" ? "active" : "")" asp-area="" asp-controller="Doctor" asp-action="Fevercheck">Fevercheck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "GuessingGame" ? "active" : "")" asp-area="" asp-controller="Guess" asp-action="GuessingGame">Guessing Game</a>
                 </li>
             </ul>   
         </nav>

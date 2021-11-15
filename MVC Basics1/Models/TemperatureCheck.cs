@@ -18,7 +18,7 @@ namespace MVC_Basics1.Models
                                                   
         }                                    // usually means that you are dead. 
 
-        private static string CelciusFever(float temp)
+        private static string CelciusFever(float temp) 
         {
             if (temp < 32)
                 return "You have severe hypothermia";
@@ -33,7 +33,7 @@ namespace MVC_Basics1.Models
             
         }
 
-        private static string FarenheitFever(float temp)
+        private static string FarenheitFever(float temp) // F = C * 1,6 + 32
         {
             if (temp < 89.6)
                 return "You have severe hypothermia";

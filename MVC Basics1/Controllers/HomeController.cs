@@ -34,7 +34,7 @@ namespace MVC_Basics1.Controllers
 
         public IActionResult Projects()
         {
-            ViewBag.msg = " alla ett preojekt";
+            // Last minute addition in plain HTML. Sorry about that
             return View();
         }
 
